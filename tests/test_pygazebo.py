@@ -22,7 +22,8 @@ except ImportError:
     import trollius as asyncio
 
 import sys
-_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+_b = sys.version_info[0] < 3 and (lambda x: x) or \
+                                 (lambda x: x.encode('latin1'))
 
 import mock
 import pytest
