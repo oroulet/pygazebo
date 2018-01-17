@@ -674,7 +674,7 @@ class Manager(object):
         self._read_server_data(connection)
 
     def _handle_server_sub(self, this_connection, msg):
-        if not msg.topic in self._publishers:
+        if msg.topic not in self._publishers:
             logger.warn('Manager.handle_server_sub unknown topic:' + msg.topic)
             return
 
@@ -734,7 +734,7 @@ class Manager(object):
         logger.debug('Manager.handle_publisher_subscribe:' + msg.topic)
         logger.debug(' our info: %s, %d',
                      self._server.local_host, self._server.local_port)
-        if not msg.topic in self._subscribers:
+        if msg.topic not in self._subscribers:
             logger.debug('no subscribers!')
             return
 
