@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
+import vector3d_pb2 as vector3d__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='boxgeom.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\rboxgeom.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\".\n\x07\x42oxGeom\x12#\n\x04size\x18\x01 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,])
+  dependencies=[vector3d__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -49,6 +50,7 @@ _BOXGEOM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -56,7 +58,7 @@ _BOXGEOM = _descriptor.Descriptor(
   serialized_end=92,
 )
 
-_BOXGEOM.fields_by_name['size'].message_type = vector3d_pb2._VECTOR3D
+_BOXGEOM.fields_by_name['size'].message_type = vector3d__pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['BoxGeom'] = _BOXGEOM
 
 BoxGeom = _reflection.GeneratedProtocolMessageType('BoxGeom', (_message.Message,), dict(

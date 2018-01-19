@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import publish_pb2
+import publish_pb2 as publish__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='publishers.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x10publishers.proto\x12\x0bgazebo.msgs\x1a\rpublish.proto\"5\n\nPublishers\x12\'\n\tpublisher\x18\x01 \x03(\x0b\x32\x14.gazebo.msgs.Publish')
   ,
-  dependencies=[publish_pb2.DESCRIPTOR,])
+  dependencies=[publish__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -49,6 +50,7 @@ _PUBLISHERS = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -56,7 +58,7 @@ _PUBLISHERS = _descriptor.Descriptor(
   serialized_end=101,
 )
 
-_PUBLISHERS.fields_by_name['publisher'].message_type = publish_pb2._PUBLISH
+_PUBLISHERS.fields_by_name['publisher'].message_type = publish__pb2._PUBLISH
 DESCRIPTOR.message_types_by_name['Publishers'] = _PUBLISHERS
 
 Publishers = _reflection.GeneratedProtocolMessageType('Publishers', (_message.Message,), dict(

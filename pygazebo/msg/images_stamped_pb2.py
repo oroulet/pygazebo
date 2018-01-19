@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import time_pb2
-from . import image_pb2
+import time_pb2 as time__pb2
+import image_pb2 as image__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='images_stamped.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x14images_stamped.proto\x12\x0bgazebo.msgs\x1a\ntime.proto\x1a\x0bimage.proto\"S\n\rImagesStamped\x12\x1f\n\x04time\x18\x01 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12!\n\x05image\x18\x02 \x03(\x0b\x32\x12.gazebo.msgs.Image')
   ,
-  dependencies=[time_pb2.DESCRIPTOR,image_pb2.DESCRIPTOR,])
+  dependencies=[time__pb2.DESCRIPTOR,image__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,6 +58,7 @@ _IMAGESSTAMPED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -64,8 +66,8 @@ _IMAGESSTAMPED = _descriptor.Descriptor(
   serialized_end=145,
 )
 
-_IMAGESSTAMPED.fields_by_name['time'].message_type = time_pb2._TIME
-_IMAGESSTAMPED.fields_by_name['image'].message_type = image_pb2._IMAGE
+_IMAGESSTAMPED.fields_by_name['time'].message_type = time__pb2._TIME
+_IMAGESSTAMPED.fields_by_name['image'].message_type = image__pb2._IMAGE
 DESCRIPTOR.message_types_by_name['ImagesStamped'] = _IMAGESSTAMPED
 
 ImagesStamped = _reflection.GeneratedProtocolMessageType('ImagesStamped', (_message.Message,), dict(

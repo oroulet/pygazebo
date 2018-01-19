@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
+import vector3d_pb2 as vector3d__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='meshgeom.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x0emeshgeom.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\"k\n\x08MeshGeom\x12\x10\n\x08\x66ilename\x18\x01 \x02(\t\x12$\n\x05scale\x18\x02 \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x0f\n\x07submesh\x18\x03 \x01(\t\x12\x16\n\x0e\x63\x65nter_submesh\x18\x04 \x01(\x08')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,])
+  dependencies=[vector3d__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -70,6 +71,7 @@ _MESHGEOM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -77,7 +79,7 @@ _MESHGEOM = _descriptor.Descriptor(
   serialized_end=154,
 )
 
-_MESHGEOM.fields_by_name['scale'].message_type = vector3d_pb2._VECTOR3D
+_MESHGEOM.fields_by_name['scale'].message_type = vector3d__pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['MeshGeom'] = _MESHGEOM
 
 MeshGeom = _reflection.GeneratedProtocolMessageType('MeshGeom', (_message.Message,), dict(

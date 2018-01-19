@@ -13,17 +13,18 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import time_pb2
-from . import vector3d_pb2
-from . import quaternion_pb2
+import time_pb2 as time__pb2
+import vector3d_pb2 as vector3d__pb2
+import quaternion_pb2 as quaternion__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='imu.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\timu.proto\x12\x0bgazebo.msgs\x1a\ntime.proto\x1a\x0evector3d.proto\x1a\x10quaternion.proto\"\xcf\x01\n\x03IMU\x12 \n\x05stamp\x18\x01 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12\x13\n\x0b\x65ntity_name\x18\x02 \x02(\t\x12,\n\x0borientation\x18\x03 \x02(\x0b\x32\x17.gazebo.msgs.Quaternion\x12/\n\x10\x61ngular_velocity\x18\x04 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\x32\n\x13linear_acceleration\x18\x05 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d')
   ,
-  dependencies=[time_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,quaternion_pb2.DESCRIPTOR,])
+  dependencies=[time__pb2.DESCRIPTOR,vector3d__pb2.DESCRIPTOR,quaternion__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -79,6 +80,7 @@ _IMU = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -86,10 +88,10 @@ _IMU = _descriptor.Descriptor(
   serialized_end=280,
 )
 
-_IMU.fields_by_name['stamp'].message_type = time_pb2._TIME
-_IMU.fields_by_name['orientation'].message_type = quaternion_pb2._QUATERNION
-_IMU.fields_by_name['angular_velocity'].message_type = vector3d_pb2._VECTOR3D
-_IMU.fields_by_name['linear_acceleration'].message_type = vector3d_pb2._VECTOR3D
+_IMU.fields_by_name['stamp'].message_type = time__pb2._TIME
+_IMU.fields_by_name['orientation'].message_type = quaternion__pb2._QUATERNION
+_IMU.fields_by_name['angular_velocity'].message_type = vector3d__pb2._VECTOR3D
+_IMU.fields_by_name['linear_acceleration'].message_type = vector3d__pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['IMU'] = _IMU
 
 IMU = _reflection.GeneratedProtocolMessageType('IMU', (_message.Message,), dict(

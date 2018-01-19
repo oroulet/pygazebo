@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import wrench_pb2
+import wrench_pb2 as wrench__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='joint_wrench.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x12joint_wrench.proto\x12\x0bgazebo.msgs\x1a\x0cwrench.proto\"\xb5\x01\n\x0bJointWrench\x12\x13\n\x0b\x62ody_1_name\x18\x01 \x02(\t\x12\x11\n\tbody_1_id\x18\x02 \x02(\r\x12\x13\n\x0b\x62ody_2_name\x18\x03 \x02(\t\x12\x11\n\tbody_2_id\x18\x04 \x02(\r\x12*\n\rbody_1_wrench\x18\x05 \x02(\x0b\x32\x13.gazebo.msgs.Wrench\x12*\n\rbody_2_wrench\x18\x06 \x02(\x0b\x32\x13.gazebo.msgs.Wrench')
   ,
-  dependencies=[wrench_pb2.DESCRIPTOR,])
+  dependencies=[wrench__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -84,6 +85,7 @@ _JOINTWRENCH = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -91,8 +93,8 @@ _JOINTWRENCH = _descriptor.Descriptor(
   serialized_end=231,
 )
 
-_JOINTWRENCH.fields_by_name['body_1_wrench'].message_type = wrench_pb2._WRENCH
-_JOINTWRENCH.fields_by_name['body_2_wrench'].message_type = wrench_pb2._WRENCH
+_JOINTWRENCH.fields_by_name['body_1_wrench'].message_type = wrench__pb2._WRENCH
+_JOINTWRENCH.fields_by_name['body_2_wrench'].message_type = wrench__pb2._WRENCH
 DESCRIPTOR.message_types_by_name['JointWrench'] = _JOINTWRENCH
 
 JointWrench = _reflection.GeneratedProtocolMessageType('JointWrench', (_message.Message,), dict(

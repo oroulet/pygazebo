@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import pose_stamped_pb2
+import pose_stamped_pb2 as pose__stamped__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='pose_trajectory.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x15pose_trajectory.proto\x12\x0bgazebo.msgs\x1a\x12pose_stamped.proto\"Z\n\x0ePoseTrajectory\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12.\n\x0cpose_stamped\x18\x03 \x03(\x0b\x32\x18.gazebo.msgs.PoseStamped')
   ,
-  dependencies=[pose_stamped_pb2.DESCRIPTOR,])
+  dependencies=[pose__stamped__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -63,6 +64,7 @@ _POSETRAJECTORY = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -70,7 +72,7 @@ _POSETRAJECTORY = _descriptor.Descriptor(
   serialized_end=148,
 )
 
-_POSETRAJECTORY.fields_by_name['pose_stamped'].message_type = pose_stamped_pb2._POSESTAMPED
+_POSETRAJECTORY.fields_by_name['pose_stamped'].message_type = pose__stamped__pb2._POSESTAMPED
 DESCRIPTOR.message_types_by_name['PoseTrajectory'] = _POSETRAJECTORY
 
 PoseTrajectory = _reflection.GeneratedProtocolMessageType('PoseTrajectory', (_message.Message,), dict(

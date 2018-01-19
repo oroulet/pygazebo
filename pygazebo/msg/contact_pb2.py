@@ -13,17 +13,18 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
-from . import time_pb2
-from . import joint_wrench_pb2
+import vector3d_pb2 as vector3d__pb2
+import time_pb2 as time__pb2
+import joint_wrench_pb2 as joint__wrench__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='contact.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\rcontact.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\x1a\ntime.proto\x1a\x12joint_wrench.proto\"\xea\x01\n\x07\x43ontact\x12\x12\n\ncollision1\x18\x01 \x02(\t\x12\x12\n\ncollision2\x18\x02 \x02(\t\x12\'\n\x08position\x18\x03 \x03(\x0b\x32\x15.gazebo.msgs.Vector3d\x12%\n\x06normal\x18\x04 \x03(\x0b\x32\x15.gazebo.msgs.Vector3d\x12\r\n\x05\x64\x65pth\x18\x05 \x03(\x01\x12(\n\x06wrench\x18\x06 \x03(\x0b\x32\x18.gazebo.msgs.JointWrench\x12\x1f\n\x04time\x18\x07 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12\r\n\x05world\x18\x08 \x02(\t')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,time_pb2.DESCRIPTOR,joint_wrench_pb2.DESCRIPTOR,])
+  dependencies=[vector3d__pb2.DESCRIPTOR,time__pb2.DESCRIPTOR,joint__wrench__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -100,6 +101,7 @@ _CONTACT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -107,10 +109,10 @@ _CONTACT = _descriptor.Descriptor(
   serialized_end=313,
 )
 
-_CONTACT.fields_by_name['position'].message_type = vector3d_pb2._VECTOR3D
-_CONTACT.fields_by_name['normal'].message_type = vector3d_pb2._VECTOR3D
-_CONTACT.fields_by_name['wrench'].message_type = joint_wrench_pb2._JOINTWRENCH
-_CONTACT.fields_by_name['time'].message_type = time_pb2._TIME
+_CONTACT.fields_by_name['position'].message_type = vector3d__pb2._VECTOR3D
+_CONTACT.fields_by_name['normal'].message_type = vector3d__pb2._VECTOR3D
+_CONTACT.fields_by_name['wrench'].message_type = joint__wrench__pb2._JOINTWRENCH
+_CONTACT.fields_by_name['time'].message_type = time__pb2._TIME
 DESCRIPTOR.message_types_by_name['Contact'] = _CONTACT
 
 Contact = _reflection.GeneratedProtocolMessageType('Contact', (_message.Message,), dict(

@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
-from . import time_pb2
+import vector3d_pb2 as vector3d__pb2
+import time_pb2 as time__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='link_data.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x0flink_data.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\x1a\ntime.proto\"\x9a\x01\n\x08LinkData\x12\x1f\n\x04time\x18\x01 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12\x0c\n\x04name\x18\x02 \x02(\t\x12.\n\x0flinear_velocity\x18\x03 \x01(\x0b\x32\x15.gazebo.msgs.Vector3d\x12/\n\x10\x61ngular_velocity\x18\x04 \x01(\x0b\x32\x15.gazebo.msgs.Vector3d')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,time_pb2.DESCRIPTOR,])
+  dependencies=[vector3d__pb2.DESCRIPTOR,time__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -71,6 +72,7 @@ _LINKDATA = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -78,9 +80,9 @@ _LINKDATA = _descriptor.Descriptor(
   serialized_end=215,
 )
 
-_LINKDATA.fields_by_name['time'].message_type = time_pb2._TIME
-_LINKDATA.fields_by_name['linear_velocity'].message_type = vector3d_pb2._VECTOR3D
-_LINKDATA.fields_by_name['angular_velocity'].message_type = vector3d_pb2._VECTOR3D
+_LINKDATA.fields_by_name['time'].message_type = time__pb2._TIME
+_LINKDATA.fields_by_name['linear_velocity'].message_type = vector3d__pb2._VECTOR3D
+_LINKDATA.fields_by_name['angular_velocity'].message_type = vector3d__pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['LinkData'] = _LINKDATA
 
 LinkData = _reflection.GeneratedProtocolMessageType('LinkData', (_message.Message,), dict(

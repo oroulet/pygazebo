@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import joint_wrench_pb2
-from . import time_pb2
+import joint_wrench_pb2 as joint__wrench__pb2
+import time_pb2 as time__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='joint_wrench_stamped.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x1ajoint_wrench_stamped.proto\x12\x0bgazebo.msgs\x1a\x12joint_wrench.proto\x1a\ntime.proto\"X\n\x0b\x46orceTorque\x12(\n\x06wrench\x18\x01 \x03(\x0b\x32\x18.gazebo.msgs.JointWrench\x12\x1f\n\x04time\x18\x02 \x02(\x0b\x32\x11.gazebo.msgs.Time')
   ,
-  dependencies=[joint_wrench_pb2.DESCRIPTOR,time_pb2.DESCRIPTOR,])
+  dependencies=[joint__wrench__pb2.DESCRIPTOR,time__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,6 +58,7 @@ _FORCETORQUE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -64,8 +66,8 @@ _FORCETORQUE = _descriptor.Descriptor(
   serialized_end=163,
 )
 
-_FORCETORQUE.fields_by_name['wrench'].message_type = joint_wrench_pb2._JOINTWRENCH
-_FORCETORQUE.fields_by_name['time'].message_type = time_pb2._TIME
+_FORCETORQUE.fields_by_name['wrench'].message_type = joint__wrench__pb2._JOINTWRENCH
+_FORCETORQUE.fields_by_name['time'].message_type = time__pb2._TIME
 DESCRIPTOR.message_types_by_name['ForceTorque'] = _FORCETORQUE
 
 ForceTorque = _reflection.GeneratedProtocolMessageType('ForceTorque', (_message.Message,), dict(

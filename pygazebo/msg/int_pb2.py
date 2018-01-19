@@ -18,6 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='int.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\tint.proto\x12\x0bgazebo.msgs\"\x13\n\x03Int\x12\x0c\n\x04\x64\x61ta\x18\x01 \x02(\x05')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -47,6 +48,7 @@ _INT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],

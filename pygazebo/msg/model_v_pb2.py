@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import model_pb2
+import model_pb2 as model__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='model_v.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\rmodel_v.proto\x12\x0bgazebo.msgs\x1a\x0bmodel.proto\"-\n\x07Model_V\x12\"\n\x06models\x18\x02 \x03(\x0b\x32\x12.gazebo.msgs.Model')
   ,
-  dependencies=[model_pb2.DESCRIPTOR,])
+  dependencies=[model__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -49,6 +50,7 @@ _MODEL_V = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -56,7 +58,7 @@ _MODEL_V = _descriptor.Descriptor(
   serialized_end=88,
 )
 
-_MODEL_V.fields_by_name['models'].message_type = model_pb2._MODEL
+_MODEL_V.fields_by_name['models'].message_type = model__pb2._MODEL
 DESCRIPTOR.message_types_by_name['Model_V'] = _MODEL_V
 
 Model_V = _reflection.GeneratedProtocolMessageType('Model_V', (_message.Message,), dict(

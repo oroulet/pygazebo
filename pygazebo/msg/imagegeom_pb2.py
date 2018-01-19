@@ -18,6 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='imagegeom.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x0fimagegeom.proto\x12\x0bgazebo.msgs\"d\n\tImageGeom\x12\x0b\n\x03uri\x18\x01 \x02(\t\x12\r\n\x05scale\x18\x02 \x01(\x01\x12\x16\n\tthreshold\x18\x03 \x01(\x05:\x03\x32\x35\x35\x12\x0e\n\x06height\x18\x04 \x01(\x01\x12\x13\n\x0bgranularity\x18\x05 \x01(\x05')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -42,7 +43,7 @@ _IMAGEGEOM = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='scale', full_name='gazebo.msgs.ImageGeom.scale', index=1,
       number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -56,7 +57,7 @@ _IMAGEGEOM = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='height', full_name='gazebo.msgs.ImageGeom.height', index=3,
       number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -75,6 +76,7 @@ _IMAGEGEOM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],

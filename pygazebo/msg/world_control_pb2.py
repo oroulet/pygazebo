@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import world_reset_pb2
+import world_reset_pb2 as world__reset__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='world_control.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x13world_control.proto\x12\x0bgazebo.msgs\x1a\x11world_reset.proto\"u\n\x0cWorldControl\x12\r\n\x05pause\x18\x01 \x01(\x08\x12\x0c\n\x04step\x18\x02 \x01(\x08\x12\x12\n\nmulti_step\x18\x03 \x01(\r\x12&\n\x05reset\x18\x04 \x01(\x0b\x32\x17.gazebo.msgs.WorldReset\x12\x0c\n\x04seed\x18\x05 \x01(\r')
   ,
-  dependencies=[world_reset_pb2.DESCRIPTOR,])
+  dependencies=[world__reset__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -77,6 +78,7 @@ _WORLDCONTROL = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -84,7 +86,7 @@ _WORLDCONTROL = _descriptor.Descriptor(
   serialized_end=172,
 )
 
-_WORLDCONTROL.fields_by_name['reset'].message_type = world_reset_pb2._WORLDRESET
+_WORLDCONTROL.fields_by_name['reset'].message_type = world__reset__pb2._WORLDRESET
 DESCRIPTOR.message_types_by_name['WorldControl'] = _WORLDCONTROL
 
 WorldControl = _reflection.GeneratedProtocolMessageType('WorldControl', (_message.Message,), dict(

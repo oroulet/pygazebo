@@ -18,6 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='request.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\rrequest.proto\x12\x0bgazebo.msgs\"F\n\x07Request\x12\n\n\x02id\x18\x01 \x02(\x05\x12\x0f\n\x07request\x18\x02 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x10\n\x08\x64\x62l_data\x18\x04 \x01(\x01')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -56,7 +57,7 @@ _REQUEST = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='dbl_data', full_name='gazebo.msgs.Request.dbl_data', index=3,
       number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -68,6 +69,7 @@ _REQUEST = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],

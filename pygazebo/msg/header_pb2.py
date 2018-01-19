@@ -13,15 +13,16 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import time_pb2
+import time_pb2 as time__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='header.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x0cheader.proto\x12\x0bgazebo.msgs\x1a\ntime.proto\"I\n\x06Header\x12\x0e\n\x06str_id\x18\x01 \x01(\t\x12 \n\x05stamp\x18\x02 \x01(\x0b\x32\x11.gazebo.msgs.Time\x12\r\n\x05index\x18\x03 \x01(\x05')
   ,
-  dependencies=[time_pb2.DESCRIPTOR,])
+  dependencies=[time__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -63,6 +64,7 @@ _HEADER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -70,7 +72,7 @@ _HEADER = _descriptor.Descriptor(
   serialized_end=114,
 )
 
-_HEADER.fields_by_name['stamp'].message_type = time_pb2._TIME
+_HEADER.fields_by_name['stamp'].message_type = time__pb2._TIME
 DESCRIPTOR.message_types_by_name['Header'] = _HEADER
 
 Header = _reflection.GeneratedProtocolMessageType('Header', (_message.Message,), dict(

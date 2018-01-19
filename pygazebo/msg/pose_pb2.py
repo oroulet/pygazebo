@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import vector3d_pb2
-from . import quaternion_pb2
+import vector3d_pb2 as vector3d__pb2
+import quaternion_pb2 as quaternion__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='pose.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\npose.proto\x12\x0bgazebo.msgs\x1a\x0evector3d.proto\x1a\x10quaternion.proto\"w\n\x04Pose\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\r\x12\'\n\x08position\x18\x03 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d\x12,\n\x0borientation\x18\x04 \x02(\x0b\x32\x17.gazebo.msgs.Quaternion')
   ,
-  dependencies=[vector3d_pb2.DESCRIPTOR,quaternion_pb2.DESCRIPTOR,])
+  dependencies=[vector3d__pb2.DESCRIPTOR,quaternion__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -71,6 +72,7 @@ _POSE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -78,8 +80,8 @@ _POSE = _descriptor.Descriptor(
   serialized_end=180,
 )
 
-_POSE.fields_by_name['position'].message_type = vector3d_pb2._VECTOR3D
-_POSE.fields_by_name['orientation'].message_type = quaternion_pb2._QUATERNION
+_POSE.fields_by_name['position'].message_type = vector3d__pb2._VECTOR3D
+_POSE.fields_by_name['orientation'].message_type = quaternion__pb2._QUATERNION
 DESCRIPTOR.message_types_by_name['Pose'] = _POSE
 
 Pose = _reflection.GeneratedProtocolMessageType('Pose', (_message.Message,), dict(

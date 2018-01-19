@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import time_pb2
-from . import wrench_pb2
+import time_pb2 as time__pb2
+import wrench_pb2 as wrench__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='wrench_stamped.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x14wrench_stamped.proto\x12\x0bgazebo.msgs\x1a\ntime.proto\x1a\x0cwrench.proto\"U\n\rWrenchStamped\x12\x1f\n\x04time\x18\x01 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12#\n\x06wrench\x18\x02 \x02(\x0b\x32\x13.gazebo.msgs.Wrench')
   ,
-  dependencies=[time_pb2.DESCRIPTOR,wrench_pb2.DESCRIPTOR,])
+  dependencies=[time__pb2.DESCRIPTOR,wrench__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,6 +58,7 @@ _WRENCHSTAMPED = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -64,8 +66,8 @@ _WRENCHSTAMPED = _descriptor.Descriptor(
   serialized_end=148,
 )
 
-_WRENCHSTAMPED.fields_by_name['time'].message_type = time_pb2._TIME
-_WRENCHSTAMPED.fields_by_name['wrench'].message_type = wrench_pb2._WRENCH
+_WRENCHSTAMPED.fields_by_name['time'].message_type = time__pb2._TIME
+_WRENCHSTAMPED.fields_by_name['wrench'].message_type = wrench__pb2._WRENCH
 DESCRIPTOR.message_types_by_name['WrenchStamped'] = _WRENCHSTAMPED
 
 WrenchStamped = _reflection.GeneratedProtocolMessageType('WrenchStamped', (_message.Message,), dict(

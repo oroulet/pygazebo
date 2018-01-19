@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import time_pb2
-import vector3d_pb2
+import time_pb2 as time__pb2
+import vector3d_pb2 as vector3d__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='magnetometer.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x12magnetometer.proto\x12\x0bgazebo.msgs\x1a\ntime.proto\x1a\x0evector3d.proto\"[\n\x0cMagnetometer\x12\x1f\n\x04time\x18\x01 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12*\n\x0b\x66ield_tesla\x18\x02 \x02(\x0b\x32\x15.gazebo.msgs.Vector3d')
   ,
-  dependencies=[time_pb2.DESCRIPTOR,vector3d_pb2.DESCRIPTOR,])
+  dependencies=[time__pb2.DESCRIPTOR,vector3d__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -57,6 +58,7 @@ _MAGNETOMETER = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -64,8 +66,8 @@ _MAGNETOMETER = _descriptor.Descriptor(
   serialized_end=154,
 )
 
-_MAGNETOMETER.fields_by_name['time'].message_type = time_pb2._TIME
-_MAGNETOMETER.fields_by_name['field_tesla'].message_type = vector3d_pb2._VECTOR3D
+_MAGNETOMETER.fields_by_name['time'].message_type = time__pb2._TIME
+_MAGNETOMETER.fields_by_name['field_tesla'].message_type = vector3d__pb2._VECTOR3D
 DESCRIPTOR.message_types_by_name['Magnetometer'] = _MAGNETOMETER
 
 Magnetometer = _reflection.GeneratedProtocolMessageType('Magnetometer', (_message.Message,), dict(

@@ -13,24 +13,21 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import header_pb2
-from . import color_pb2
-from . import fog_pb2
-from . import sky_pb2
-from . import shadows_pb2
-from . import visual_pb2
-from . import pose_pb2
-from . import light_pb2
-from . import joint_pb2
-from . import model_pb2
+import color_pb2 as color__pb2
+import fog_pb2 as fog__pb2
+import sky_pb2 as sky__pb2
+import light_pb2 as light__pb2
+import joint_pb2 as joint__pb2
+import model_pb2 as model__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='scene.proto',
   package='gazebo.msgs',
-  serialized_pb=_b('\n\x0bscene.proto\x12\x0bgazebo.msgs\x1a\x0cheader.proto\x1a\x0b\x63olor.proto\x1a\tfog.proto\x1a\tsky.proto\x1a\rshadows.proto\x1a\x0cvisual.proto\x1a\npose.proto\x1a\x0blight.proto\x1a\x0bjoint.proto\x1a\x0bmodel.proto\"\xae\x02\n\x05Scene\x12\x0c\n\x04name\x18\x01 \x02(\t\x12#\n\x07\x61mbient\x18\x02 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12&\n\nbackground\x18\x03 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12\x1d\n\x03sky\x18\x04 \x01(\x0b\x32\x10.gazebo.msgs.Sky\x12\x15\n\x07shadows\x18\x05 \x01(\x08:\x04true\x12\x1d\n\x03\x66og\x18\x06 \x01(\x0b\x32\x10.gazebo.msgs.Fog\x12\x0c\n\x04grid\x18\x07 \x01(\x08\x12!\n\x05model\x18\x08 \x03(\x0b\x32\x12.gazebo.msgs.Model\x12!\n\x05light\x18\t \x03(\x0b\x32\x12.gazebo.msgs.Light\x12!\n\x05joint\x18\n \x03(\x0b\x32\x12.gazebo.msgs.Joint')
+  syntax='proto2',
+  serialized_pb=_b('\n\x0bscene.proto\x12\x0bgazebo.msgs\x1a\x0b\x63olor.proto\x1a\tfog.proto\x1a\tsky.proto\x1a\x0blight.proto\x1a\x0bjoint.proto\x1a\x0bmodel.proto\"\xc5\x02\n\x05Scene\x12\x0c\n\x04name\x18\x01 \x02(\t\x12#\n\x07\x61mbient\x18\x02 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12&\n\nbackground\x18\x03 \x01(\x0b\x32\x12.gazebo.msgs.Color\x12\x1d\n\x03sky\x18\x04 \x01(\x0b\x32\x10.gazebo.msgs.Sky\x12\x15\n\x07shadows\x18\x05 \x01(\x08:\x04true\x12\x1d\n\x03\x66og\x18\x06 \x01(\x0b\x32\x10.gazebo.msgs.Fog\x12\x0c\n\x04grid\x18\x07 \x01(\x08\x12!\n\x05model\x18\x08 \x03(\x0b\x32\x12.gazebo.msgs.Model\x12!\n\x05light\x18\t \x03(\x0b\x32\x12.gazebo.msgs.Light\x12!\n\x05joint\x18\n \x03(\x0b\x32\x12.gazebo.msgs.Joint\x12\x15\n\rorigin_visual\x18\x0b \x01(\x08')
   ,
-  dependencies=[header_pb2.DESCRIPTOR,color_pb2.DESCRIPTOR,fog_pb2.DESCRIPTOR,sky_pb2.DESCRIPTOR,shadows_pb2.DESCRIPTOR,visual_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,light_pb2.DESCRIPTOR,joint_pb2.DESCRIPTOR,model_pb2.DESCRIPTOR,])
+  dependencies=[color__pb2.DESCRIPTOR,fog__pb2.DESCRIPTOR,sky__pb2.DESCRIPTOR,light__pb2.DESCRIPTOR,joint__pb2.DESCRIPTOR,model__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -113,6 +110,13 @@ _SCENE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='origin_visual', full_name='gazebo.msgs.Scene.origin_visual', index=10,
+      number=11, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -121,20 +125,21 @@ _SCENE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=158,
-  serialized_end=460,
+  serialized_start=103,
+  serialized_end=428,
 )
 
-_SCENE.fields_by_name['ambient'].message_type = color_pb2._COLOR
-_SCENE.fields_by_name['background'].message_type = color_pb2._COLOR
-_SCENE.fields_by_name['sky'].message_type = sky_pb2._SKY
-_SCENE.fields_by_name['fog'].message_type = fog_pb2._FOG
-_SCENE.fields_by_name['model'].message_type = model_pb2._MODEL
-_SCENE.fields_by_name['light'].message_type = light_pb2._LIGHT
-_SCENE.fields_by_name['joint'].message_type = joint_pb2._JOINT
+_SCENE.fields_by_name['ambient'].message_type = color__pb2._COLOR
+_SCENE.fields_by_name['background'].message_type = color__pb2._COLOR
+_SCENE.fields_by_name['sky'].message_type = sky__pb2._SKY
+_SCENE.fields_by_name['fog'].message_type = fog__pb2._FOG
+_SCENE.fields_by_name['model'].message_type = model__pb2._MODEL
+_SCENE.fields_by_name['light'].message_type = light__pb2._LIGHT
+_SCENE.fields_by_name['joint'].message_type = joint__pb2._JOINT
 DESCRIPTOR.message_types_by_name['Scene'] = _SCENE
 
 Scene = _reflection.GeneratedProtocolMessageType('Scene', (_message.Message,), dict(

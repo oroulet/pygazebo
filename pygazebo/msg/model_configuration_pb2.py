@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import time_pb2
-from . import pose_pb2
+import time_pb2 as time__pb2
+import pose_pb2 as pose__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='model_configuration.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x19model_configuration.proto\x12\x0bgazebo.msgs\x1a\ntime.proto\x1a\npose.proto\"\x97\x01\n\x12ModelConfiguration\x12\x1f\n\x04time\x18\x01 \x02(\x0b\x32\x11.gazebo.msgs.Time\x12\x13\n\x0bjoint_names\x18\x02 \x03(\t\x12\x17\n\x0fjoint_positions\x18\x03 \x03(\x01\x12\x1f\n\x04pose\x18\x04 \x01(\x0b\x32\x11.gazebo.msgs.Pose\x12\x11\n\tlink_name\x18\x05 \x01(\t')
   ,
-  dependencies=[time_pb2.DESCRIPTOR,pose_pb2.DESCRIPTOR,])
+  dependencies=[time__pb2.DESCRIPTOR,pose__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -78,6 +79,7 @@ _MODELCONFIGURATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -85,8 +87,8 @@ _MODELCONFIGURATION = _descriptor.Descriptor(
   serialized_end=218,
 )
 
-_MODELCONFIGURATION.fields_by_name['time'].message_type = time_pb2._TIME
-_MODELCONFIGURATION.fields_by_name['pose'].message_type = pose_pb2._POSE
+_MODELCONFIGURATION.fields_by_name['time'].message_type = time__pb2._TIME
+_MODELCONFIGURATION.fields_by_name['pose'].message_type = pose__pb2._POSE
 DESCRIPTOR.message_types_by_name['ModelConfiguration'] = _MODELCONFIGURATION
 
 ModelConfiguration = _reflection.GeneratedProtocolMessageType('ModelConfiguration', (_message.Message,), dict(

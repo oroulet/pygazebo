@@ -18,6 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='spheregeom.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x10spheregeom.proto\x12\x0bgazebo.msgs\"\x1c\n\nSphereGeom\x12\x0e\n\x06radius\x18\x01 \x02(\x01')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -35,7 +36,7 @@ _SPHEREGEOM = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='radius', full_name='gazebo.msgs.SphereGeom.radius', index=0,
       number=1, type=1, cpp_type=5, label=2,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -47,6 +48,7 @@ _SPHEREGEOM = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],

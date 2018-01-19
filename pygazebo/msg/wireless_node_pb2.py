@@ -18,6 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='wireless_node.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x13wireless_node.proto\x12\x0bgazebo.msgs\"F\n\x0cWirelessNode\x12\r\n\x05\x65ssid\x18\x01 \x02(\t\x12\x11\n\tfrequency\x18\x02 \x02(\x01\x12\x14\n\x0csignal_level\x18\x03 \x02(\x01')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -42,14 +43,14 @@ _WIRELESSNODE = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='frequency', full_name='gazebo.msgs.WirelessNode.frequency', index=1,
       number=2, type=1, cpp_type=5, label=2,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='signal_level', full_name='gazebo.msgs.WirelessNode.signal_level', index=2,
       number=3, type=1, cpp_type=5, label=2,
-      has_default_value=False, default_value=0,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -61,6 +62,7 @@ _WIRELESSNODE = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],

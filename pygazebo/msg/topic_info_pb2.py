@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import publish_pb2
-from . import subscribe_pb2
+import publish_pb2 as publish__pb2
+import subscribe_pb2 as subscribe__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='topic_info.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x10topic_info.proto\x12\x0bgazebo.msgs\x1a\rpublish.proto\x1a\x0fsubscribe.proto\"r\n\tTopicInfo\x12\x10\n\x08msg_type\x18\x01 \x02(\t\x12\'\n\tpublisher\x18\x02 \x03(\x0b\x32\x14.gazebo.msgs.Publish\x12*\n\nsubscriber\x18\x03 \x03(\x0b\x32\x16.gazebo.msgs.Subscribe')
   ,
-  dependencies=[publish_pb2.DESCRIPTOR,subscribe_pb2.DESCRIPTOR,])
+  dependencies=[publish__pb2.DESCRIPTOR,subscribe__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -64,6 +65,7 @@ _TOPICINFO = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -71,8 +73,8 @@ _TOPICINFO = _descriptor.Descriptor(
   serialized_end=179,
 )
 
-_TOPICINFO.fields_by_name['publisher'].message_type = publish_pb2._PUBLISH
-_TOPICINFO.fields_by_name['subscriber'].message_type = subscribe_pb2._SUBSCRIBE
+_TOPICINFO.fields_by_name['publisher'].message_type = publish__pb2._PUBLISH
+_TOPICINFO.fields_by_name['subscriber'].message_type = subscribe__pb2._SUBSCRIBE
 DESCRIPTOR.message_types_by_name['TopicInfo'] = _TOPICINFO
 
 TopicInfo = _reflection.GeneratedProtocolMessageType('TopicInfo', (_message.Message,), dict(

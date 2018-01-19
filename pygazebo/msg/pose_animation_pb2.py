@@ -13,16 +13,17 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from . import pose_pb2
-from . import time_pb2
+import pose_pb2 as pose__pb2
+import time_pb2 as time__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='pose_animation.proto',
   package='gazebo.msgs',
+  syntax='proto2',
   serialized_pb=_b('\n\x14pose_animation.proto\x12\x0bgazebo.msgs\x1a\npose.proto\x1a\ntime.proto\"w\n\rPoseAnimation\x12\x12\n\nmodel_name\x18\x01 \x02(\t\x12\x10\n\x08model_id\x18\x02 \x01(\r\x12\x1f\n\x04pose\x18\x03 \x03(\x0b\x32\x11.gazebo.msgs.Pose\x12\x1f\n\x04time\x18\x04 \x03(\x0b\x32\x11.gazebo.msgs.Time')
   ,
-  dependencies=[pose_pb2.DESCRIPTOR,time_pb2.DESCRIPTOR,])
+  dependencies=[pose__pb2.DESCRIPTOR,time__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -71,6 +72,7 @@ _POSEANIMATION = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
@@ -78,8 +80,8 @@ _POSEANIMATION = _descriptor.Descriptor(
   serialized_end=180,
 )
 
-_POSEANIMATION.fields_by_name['pose'].message_type = pose_pb2._POSE
-_POSEANIMATION.fields_by_name['time'].message_type = time_pb2._TIME
+_POSEANIMATION.fields_by_name['pose'].message_type = pose__pb2._POSE
+_POSEANIMATION.fields_by_name['time'].message_type = time__pb2._TIME
 DESCRIPTOR.message_types_by_name['PoseAnimation'] = _POSEANIMATION
 
 PoseAnimation = _reflection.GeneratedProtocolMessageType('PoseAnimation', (_message.Message,), dict(
